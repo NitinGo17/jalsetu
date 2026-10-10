@@ -1,0 +1,17 @@
+# Render Blueprint — one-click deploy of JalSetu.
+# Push this repo to GitHub, then in Render: New + → Blueprint → pick the repo.
+# Set SARVAM_API_KEY in the Render dashboard (it is deliberately NOT in the repo).
+services:
+  - type: web
+    name: jalsetu
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.6"
+      # sync:false means "prompt for this in the dashboard, never store it in git"
+      - key: SARVAM_API_KEY
+        sync: false

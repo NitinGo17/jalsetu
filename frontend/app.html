@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>JalSetu</title>
+<meta name="theme-color" content="#0b271d" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2322a06b' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></symbol>
+  <symbol id="i-rain" viewBox="0 0 24 24"><path d="M4 14.9A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.24M16 14v6M8 14v6M12 16v6"/></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></symbol>
+  <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M7 20h10M10 20c5.5-2.5.8-6.4 3-10M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8zM14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
+  <symbol id="i-dashboard" viewBox="0 0 24 24"><path d="M3 3h7v9H3zM14 3h7v5h-7zM14 12h7v9h-7zM3 16h7v5H3z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20ZM12 8v8M8 12h8"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83ZM2 12l8.58 3.91a2 2 0 0 0 1.66 0L22 12M2 17l8.58 3.91a2 2 0 0 0 1.66 0L22 17"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></symbol>
+  <symbol id="i-settings" viewBox="0 0 24 24"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-thermo" viewBox="0 0 24 24"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></symbol>
+  <symbol id="i-wind" viewBox="0 0 24 24"><path d="M12.8 19.6A2 2 0 1 0 14 16H2M17.5 8a2.5 2.5 0 1 1 2 4H2M9.8 4.4A2 2 0 1 1 11 8H2"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3ZM12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4 12 14.01l-3-3"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M17 3a2.85 2.85 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3ZM19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z"/><circle cx="12" cy="13" r="3"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+  <symbol id="i-volume" viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4V5zM15.5 8.5a5 5 0 0 1 0 7M19 5a9 9 0 0 1 0 14"/></symbol>
+  <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1zM9 12l2 2 4-4"/></symbol>
+</defs></svg>
+
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="sidebar__brand brand" href="/">
+      <span class="brand__mark"><svg class="icon" aria-hidden="true"><use href="#i-drop"/></svg></span>
+      <span class="brand__name">JalSetu</span>
+    </a>
+    <nav class="sidebar__nav" aria-label="Sections">
+      <span class="sidebar__group-label">JalSetu</span>
+      <button class="nav-item" data-route="dashboard"><svg class="icon" aria-hidden="true"><use href="#i-dashboard"/></svg><span data-i18n="nav.dashboard">Home</span></button>
+      <button class="nav-item" data-route="analysis"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg><span data-i18n="nav.analysis">Check my field</span></button>
+      <button class="nav-item" data-route="results"><svg class="icon" aria-hidden="true"><use href="#i-gauge"/></svg><span data-i18n="nav.results">My result</span></button>
+      <button class="nav-item" data-route="fields"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg><span data-i18n="nav.fields">My fields</span></button>
+      <button class="nav-item" data-route="ask"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><span data-i18n="nav.ask">Ask JalSetu</span></button>
+      <span class="sidebar__group-label" data-i18n="nav.crops">Crops</span>
+      <button class="nav-item" data-route="crops"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><span data-i18n="nav.crops">Crops</span></button>
+      <button class="nav-item" data-route="weather"><svg class="icon" aria-hidden="true"><use href="#i-cloud"/></svg><span data-i18n="nav.weather">Weather</span></button>
+      <button class="nav-item" data-route="settings"><svg class="icon" aria-hidden="true"><use href="#i-settings"/></svg><span data-i18n="nav.settings">Settings</span></button>
+    </nav>
+    <div class="sidebar__foot">
+      <p class="tiny" style="color:rgba(255,255,255,0.5);margin:0">JalSetu v2.0<br><span data-i18n="top.offline">Works offline</span></p>
+    </div>
+  </aside>
+
+  <div class="app-main">
+    <header class="topbar">
+      <div class="topbar__title">
+        <h1 id="pageTitle">Home</h1>
+        <p id="pageSubtitle" data-i18n="app.tagline">Farming water advice</p>
+      </div>
+      <div class="topbar__tools">
+        <label class="lang-switch" title="Language">
+          <svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>
+          <span class="visually-hidden" data-i18n="top.language">Language</span>
+          <select class="select" id="langSelect" aria-label="Language"></select>
+        </label>
+        <label class="switch" title="Practice weather">
+          <input type="checkbox" id="demoToggle">
+          <span data-i18n="top.practice">Practice weather</span>
+        </label>
+        <label class="visually-hidden" for="scenarioSelect" data-i18n="top.example">Example</label>
+        <select class="select" id="scenarioSelect" style="width:auto" aria-label="Example"></select>
+        <span class="badge badge--muted" id="apiStatus" data-i18n="top.checking">Checking</span>
+      </div>
+    </header>
+
+    <section class="view" id="view-dashboard"><div id="dashboardBody"></div></section>
+
+    <section class="view" id="view-analysis" hidden>
+      <div class="grid grid--2" style="align-items:start">
+        <div class="card">
+          <div class="card__head">
+            <h3 data-i18n="form.title">Tell us about your field</h3>
+            <span class="badge badge--outline" data-i18n="form.subtitle">It takes about a minute.</span>
+          </div>
+          <div class="card__body">
+            <form id="analysisForm" novalidate>
+              <div class="form-grid">
+                <div class="field field--full">
+                  <label for="f-location" data-i18n="form.location">Where is your field?</label>
+                  <div class="input-group">
+                    <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+                    <input class="input" id="f-location" type="text" placeholder="Prayagraj, Uttar Pradesh" autocomplete="off" />
+                  </div>
+                  <span class="hint" data-i18n="form.location.hint">Village, town or district name</span>
+                  <span class="error" data-error-for="f-location"></span>
+                </div>
+
+                <div class="field">
+                  <label for="f-crop" data-i18n="form.crop">Which crop is growing?</label>
+                  <select class="select" id="f-crop"></select>
+                  <span class="error" data-error-for="f-crop"></span>
+                </div>
+
+                <div class="field">
+                  <label for="f-stage" data-i18n="form.stage">How old is the crop?</label>
+                  <select class="select" id="f-stage"></select>
+                  <span class="error" data-error-for="f-stage"></span>
+                </div>
+
+                <div class="field">
+                  <label for="f-soil" data-i18n="form.soil">What kind of soil is it?</label>
+                  <select class="select" id="f-soil"></select>
+                  <span class="error" data-error-for="f-soil"></span>
+                </div>
+
+                <div class="field">
+                  <label for="f-method" data-i18n="form.method">How do you water the field?</label>
+                  <select class="select" id="f-method"></select>
+                  <span class="error" data-error-for="f-method"></span>
+                </div>
+
+                <div class="field field--full">
+                  <label for="f-area" data-i18n="form.area">How big is the field?</label>
+                  <div class="row">
+                    <input class="input" id="f-area" type="number" min="0" step="0.01" placeholder="1" style="flex:2" />
+                    <select class="select" id="f-area-unit" style="flex:1" aria-label="Unit"></select>
+                  </div>
+                  <span class="error" data-error-for="f-area"></span>
+                </div>
+
+                <div class="field field--full">
+                  <label for="f-water" data-i18n="form.water">How much water do you have for it?</label>
+                  <input class="input" id="f-water" type="number" min="0" step="100" placeholder="50000" />
+                  <span class="hint" data-i18n="form.water.hint">Not sure? Leave this empty.</span>
+                  <span class="error" data-error-for="f-water"></span>
+                </div>
+
+                <div class="field field--full">
+                  <label for="f-name" data-i18n="form.name">Name this field</label>
+                  <input class="input" id="f-name" type="text" placeholder="Main Field" maxlength="120" />
+                  <span class="error" data-error-for="f-name"></span>
+                </div>
+              </div>
+              <div class="form-actions">
+                <button class="btn btn--primary btn--lg" type="submit" id="analyseBtn">
+                  <svg class="icon" aria-hidden="true"><use href="#i-drop"/></svg>
+                  <span data-i18n="form.submit">Get my advice</span>
+                </button>
+                <button class="btn btn--ghost" type="button" id="fillDemoBtn" data-i18n="form.fill">Fill an example</button>
+                <button class="btn btn--ghost" type="reset" id="resetFormBtn" data-i18n="form.reset">Clear</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="card">
+            <div class="card__head"><h3 data-i18n="top.example">Example</h3><span class="badge badge--demo">Practice</span></div>
+            <div class="card__body stack" id="scenarioCards"></div>
+          </div>
+          <div class="banner banner--info">
+            <svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>
+            <div class="small" data-i18n="form.water.hint">Not sure? Leave this empty.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" id="view-results" hidden><div id="resultsBody"></div></section>
+
+    <section class="view" id="view-fields" hidden>
+      <div class="row row--between wrap" style="margin-bottom:var(--sp-4)">
+        <h2 class="section-title" data-i18n="nav.fields">My fields</h2>
+        <div class="row">
+          <button class="btn btn--ghost btn--sm" id="loadSamplesBtn">Add examples</button>
+          <button class="btn btn--primary btn--sm" id="addFieldBtn"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg> Add</button>
+        </div>
+      </div>
+      <div id="fieldsBody"></div>
+    </section>
+
+    <section class="view" id="view-ask" hidden>
+      <div class="grid grid--2" style="align-items:start">
+        <div class="card">
+          <div class="card__head">
+            <h3 data-i18n="chat.title">Ask JalSetu</h3>
+            <span class="badge" id="chatBadge"></span>
+          </div>
+          <div class="card__body">
+            <p class="small muted" data-i18n="chat.subtitle">Ask anything about your crop or water.</p>
+            <div class="chat-log" id="chatLog" aria-live="polite"></div>
+            <form id="chatForm" class="row" style="margin-top:var(--sp-3)">
+              <input class="input grow" id="chatInput" data-i18n-ph="chat.placeholder" placeholder="Type your question here" autocomplete="off" />
+              <button class="btn btn--ghost" type="button" id="micBtn" title="Speak">
+                <svg class="icon" aria-hidden="true"><use href="#i-mic"/></svg>
+              </button>
+              <button class="btn btn--primary" type="submit" id="chatSend">
+                <svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>
+              </button>
+            </form>
+            <p class="tiny muted" id="voiceStatus" style="margin-top:var(--sp-2)"></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__head">
+            <h3 data-i18n="photo.title">Send a photo</h3>
+            <span class="badge" id="photoBadge"></span>
+          </div>
+          <div class="card__body">
+            <p class="small muted" data-i18n="photo.subtitle">Show us your field, crop, leaf or a fertiliser bag.</p>
+            <label class="upload" for="photoInput" id="photoDrop">
+              <svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg>
+              <span data-i18n="photo.choose">Choose a photo</span>
+              <input type="file" id="photoInput" accept="image/*" capture="environment" hidden />
+            </label>
+            <img id="photoPreview" class="photo-preview" alt="" hidden />
+            <input class="input" id="photoQuestion" data-i18n-ph="photo.question" placeholder="Ask about the photo (optional)" style="margin-top:var(--sp-3)" />
+            <button class="btn btn--primary btn--block" id="photoSend" style="margin-top:var(--sp-3)">
+              <svg class="icon" aria-hidden="true"><use href="#i-image"/></svg>
+              <span data-i18n="photo.send">Send photo</span>
+            </button>
+            <div class="banner banner--warn" style="margin-top:var(--sp-3)">
+              <svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg>
+              <div class="small" data-i18n="photo.safety">A photo helps, but always confirm medicines and fertiliser with your local agriculture officer.</div>
+            </div>
+            <div id="photoResult" style="margin-top:var(--sp-3)"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" id="view-crops" hidden>
+      <div class="row row--between wrap" style="margin-bottom:var(--sp-4)">
+        <h2 class="section-title" data-i18n="nav.crops">Crops</h2>
+        <div class="chips" id="cropFilters"></div>
+      </div>
+      <div id="cropsBody"></div>
+    </section>
+
+    <section class="view" id="view-weather" hidden>
+      <div class="card" style="margin-bottom:var(--sp-4)">
+        <div class="card__body">
+          <form id="weatherForm" class="row wrap" novalidate>
+            <div class="field grow" style="min-width:220px">
+              <label for="w-location" data-i18n="form.location">Where is your field?</label>
+              <div class="input-group">
+                <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+                <input class="input" id="w-location" type="text" placeholder="Nashik, Maharashtra" autocomplete="off" />
+              </div>
+            </div>
+            <button class="btn btn--primary" type="submit" style="align-self:flex-end">Go</button>
+            <label class="switch" style="align-self:flex-end"><input type="checkbox" id="w-demo"> <span data-i18n="top.practice">Practice weather</span></label>
+          </form>
+        </div>
+      </div>
+      <div id="weatherBody"></div>
+    </section>
+
+    <section class="view" id="view-settings" hidden><div id="settingsBody"></div></section>
+
+    <nav class="mobile-nav" aria-label="Sections">
+      <button class="nav-item" data-route="dashboard"><svg class="icon" aria-hidden="true"><use href="#i-dashboard"/></svg><span data-i18n="nav.dashboard">Home</span></button>
+      <button class="nav-item" data-route="analysis"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg><span data-i18n="nav.analysis">Check</span></button>
+      <button class="nav-item" data-route="fields"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg><span data-i18n="nav.fields">Fields</span></button>
+      <button class="nav-item" data-route="ask"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg><span data-i18n="nav.ask">Ask</span></button>
+    </nav>
+  </div>
+</div>
+
+<dialog id="fieldDialog" style="border:1px solid var(--line);border-radius:var(--r-lg);padding:0;max-width:520px;width:92vw">
+  <form id="fieldForm" method="dialog" novalidate>
+    <div class="card__head">
+      <h3 id="fieldDialogTitle">Field</h3>
+      <button class="btn btn--ghost btn--sm" type="button" id="fieldDialogClose" aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></button>
+    </div>
+    <div class="card__body">
+      <input type="hidden" id="df-id" />
+      <div class="form-grid">
+        <div class="field field--full"><label for="df-name">Name</label><input class="input" id="df-name" required maxlength="120" /></div>
+        <div class="field"><label for="df-crop" data-i18n="form.crop">Crop</label><select class="select" id="df-crop"></select></div>
+        <div class="field"><label for="df-stage" data-i18n="form.stage">Stage</label><select class="select" id="df-stage"></select></div>
+        <div class="field"><label for="df-soil" data-i18n="form.soil">Soil</label><select class="select" id="df-soil"></select></div>
+        <div class="field"><label for="df-method" data-i18n="form.method">Watering</label><select class="select" id="df-method"></select></div>
+        <div class="field"><label for="df-area" data-i18n="form.area">Size (ha)</label><input class="input" id="df-area" type="number" min="0" step="0.01" /></div>
+        <div class="field"><label for="df-water" data-i18n="form.water">Water (L)</label><input class="input" id="df-water" type="number" min="0" step="100" /></div>
+        <div class="field field--full"><label for="df-location" data-i18n="form.location">Location</label><input class="input" id="df-location" /></div>
+      </div>
+      <span class="error" id="df-error" style="display:block;margin-top:var(--sp-3)"></span>
+    </div>
+    <div class="card__head" style="border-top:1px solid var(--line);border-bottom:0">
+      <button class="btn btn--ghost btn--sm" type="button" id="fieldCancelBtn" data-i18n="common.close">Close</button>
+      <button class="btn btn--primary btn--sm" type="submit" id="fieldSaveBtn">Save</button>
+    </div>
+  </form>
+</dialog>
+
+<div class="toast-host" id="toastHost" aria-live="polite"></div>
+<audio id="player" hidden></audio>
+
+<script src="/i18n.js"></script>
+<script src="/i18n-extra.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
