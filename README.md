@@ -12,6 +12,21 @@ account, no database. Works offline.
 
 ---
 
+## Screenshots
+
+| Landing | Result (Hindi) |
+|---|---|
+| ![Landing page](docs/screenshots/landing.png) | ![Result in Hindi](docs/screenshots/result-hindi.png) |
+
+| Result (English) | Ask JalSetu + photo |
+|---|---|
+| ![Result in English](docs/screenshots/result-english.png) | ![Ask JalSetu](docs/screenshots/ask-jalsetu.png) |
+
+The result is one large plain-language sentence; the full calculation sits
+behind the *"How did I work this out?"* toggle below it.
+
+---
+
 ## 1. What changed in v2 — "user first"
 
 v1 was accurate but aimed at a technical reader. v2 is aimed at the farmer:
